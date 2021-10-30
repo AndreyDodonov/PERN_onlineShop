@@ -1,15 +1,20 @@
+const ApiError = require('../handlers/ApiError');
+
 class UserController {
-    async registration (req, res) {
+    async registration (req, res, next) {
 
     }
 
-    async login (req, res) {
+    async login (req, res, next) {
 
     }
 
-    async check (req, res) {
-        const query = req.query
-        res.json(query)
+    async check (req, res, next) {
+        const {id} = req.query
+        if (!id) {
+            return next(ApiError.badRequest('id not found !'))
+        }
+        res.json(id)
     }
 } 
 
