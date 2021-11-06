@@ -1,3 +1,6 @@
+Deprecate!
+New repo -https://github.com/AndreyDodonov/PERN_online_shop
+
 ### test app )
 
 PERN stack 
